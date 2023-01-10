@@ -29,7 +29,6 @@ const SearchControl = (props) => {
 
   const handleSearch = () => {
     const text = String(searchText).trim();
-
     if (text.length > 0)
       dispatch(
         searchNoteBookData({
@@ -48,10 +47,12 @@ const SearchControl = (props) => {
           type="search"
           placeholder={`Search by ${searchType}`}
           value={searchText}
-          onChange={(e) => setSearchtext(e.target.value)}
+          onChange={(e) => {
+            setSearchtext(e.target.value);
+          }}
         />
       </InputGroup>
-      <RadioGroup onChange={setSearchType} value={searchType}>
+      <RadioGroup value={searchType} onChange={setSearchType}>
         <Stack direction="row">
           <Radio value="title">Title</Radio>
           <Radio value="body">Body</Radio>

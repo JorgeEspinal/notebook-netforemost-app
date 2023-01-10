@@ -54,6 +54,7 @@ export const createNotebookData = (notebook) => {
           message: 'Create notebook successfully!',
         })
       );
+      dispatch(fetchNotebookData());
     } catch (error) {
       dispatch(
         uiActions.showNotification({

@@ -5,7 +5,6 @@ import {
   createNotebookData,
   updateNotebookData,
 } from '../../store/notebook-actions';
-import notebookSlice from '../../store/notebook-slice';
 import NotebookActionsForm from '../notebooks/NotebookActionsForm';
 
 const NotebookActions = () => {

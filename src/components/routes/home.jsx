@@ -1,4 +1,3 @@
-import { Stack, Skeleton } from '@chakra-ui/react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchNotebookData } from '../../store/notebook-actions';

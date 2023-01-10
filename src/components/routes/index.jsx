@@ -1,4 +1,4 @@
-import { Route, Routes as Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import ActionsNotebook from './NotebookActions';
 import App from './App';
 import Home from './home';

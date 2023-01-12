@@ -4,8 +4,8 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import {
   createNotebookData,
   updateNotebookData,
-} from '../../store/notebook-actions';
-import NotebookActionsForm from '../notebooks/NotebookActionsForm';
+} from '../store/notebook-actions';
+import NotebookActionsForm from '../components/Notebook/NotebookActionsForm';
 
 const NotebookActions = () => {
   const dispatch = useDispatch();

@@ -1,7 +1,7 @@
 import { Heading, IconButton } from '@chakra-ui/react';
 import { FaSun } from 'react-icons/fa';
 
-const HeadApp = (props) => {
+const HeaderApp = ({ children }) => {
   return (
     <>
       <IconButton icon={<FaSun />} isRound size="lg" alignSelf="flex-end" />
@@ -12,10 +12,10 @@ const HeadApp = (props) => {
         bgGradient="linear(to-r, black, blue.300, blue.500)"
         bgClip="text"
       >
-        Notebook Application
+        {children}
       </Heading>
     </>
   );
 };
 
-export default HeadApp;
+export default HeaderApp;

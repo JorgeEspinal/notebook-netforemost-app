@@ -6,20 +6,19 @@ import {
   Th,
   Thead,
   Tr,
-  Stack,
-  Skeleton,
   IconButton,
   TableCaption,
 } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import NotebookItem from './NotebookItem';
-import Filter from '../filter';
+import Filter from '../UI/SortButton';
 import { FaSyncAlt } from 'react-icons/fa';
 import { notebookActions } from '../../store/notebook-slice';
 import {
   deleteNotebook,
   fetchNotebookData,
 } from '../../store/notebook-actions';
+import SkeletonTable from '../UI/SkeletonTable';
 
 const NotebookTable = (props) => {
   const dispatch = useDispatch();
@@ -45,15 +44,6 @@ const NotebookTable = (props) => {
     dispatch(deleteNotebook(id));
     dispatch(fetchNotebookData());
   };
-
-  const skeleton = (
-    <Stack>
-      <Skeleton height="20px" />
-      <Skeleton height="20px" />
-      <Skeleton height="20px" />
-      <Skeleton height="20px" />
-    </Stack>
-  );
 
   const notebooks = props.notebooks.map((notebook) => (
     <NotebookItem
@@ -101,7 +91,7 @@ const NotebookTable = (props) => {
           <Tbody>{!isLoading && notebooks}</Tbody>
           <Tfoot></Tfoot>
         </Table>
-        {isLoading && skeleton}
+        {isLoading && <SkeletonTable />}
       </TableContainer>
     </>
   );

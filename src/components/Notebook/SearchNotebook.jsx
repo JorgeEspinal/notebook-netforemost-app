@@ -17,7 +17,7 @@ import {
   searchNoteBookData,
 } from '../../store/notebook-actions';
 
-const SearchControl = (props) => {
+const SearchNotebook = (props) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [searchType, setSearchType] = useState('title');
@@ -73,4 +73,4 @@ const SearchControl = (props) => {
   );
 };
 
-export default SearchControl;
+export default SearchNotebook;
